@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div>
+    <h1>Search Instruments</h1>
+    <p></p>
+  </div>
+
+  <div>
+    <%= form_tag(instruments_path, method: :get) do %>
+      <%= text_field_tag :term, nil, placeholder: "e.g. guitar, drums..." %>
+      <%= submit_tag 'Search' %>
+    <% end %>
+  </div>
+
+</div>

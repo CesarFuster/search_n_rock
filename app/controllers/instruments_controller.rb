@@ -3,7 +3,12 @@ class InstrumentsController < ApplicationController
   before_action :set_instrument, only: [:show, :edit, :update, :destroy]
 
   def index
-    @instruments = Instrument.all
+    if params[:term] == ""
+      @instruments = Instrument.all
+    else
+      @instruments = Instrument.where(category: params[:term])
+    end
+    @instruments = Instrument.all if @instruments.empty?
   end
 
   def show

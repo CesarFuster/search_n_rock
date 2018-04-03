@@ -1,2 +1,14 @@
-<h1>Instruments#show</h1>
-<p>Find me in app/views/instruments/show.html.erb</p>
+<div class="container">
+
+  <h1> <%= @instrument.category %> </h1>
+
+  <div>
+      <p> <%= @instrument.brand %> </p>
+      <p> <%= @instrument.description %> </p>
+      <p> <%= @instrument.condition %> </p>
+      <p> <%= @instrument.day_value %> </p>
+  </div>
+
+  <p class="btn btn-primary"> <%= link_to "back to all", instruments_path %> </p>
+
+</div>

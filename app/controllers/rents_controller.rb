@@ -1,7 +1,6 @@
 class RentsController < ApplicationController
 
-  before_action :set_instrument, only: [:show]
-
+  before_action :set_instrument, only: [:show, :new, :create]
 
   def index
     @rents = Rent.all
@@ -15,10 +14,11 @@ class RentsController < ApplicationController
   end
 
   def create
-    @rent = Rent.new(instrument_params)
+    @rent = Rent.new(rent_params)
+    @rent.instrument = @instrument
     @rent.user = current_user
-    if @rent.save
-      redirect_to user_path(current_user)
+    if @rent.save!
+      redirect_to instrument_rents_path(@instrument)
     else
       render :new
     end
@@ -27,11 +27,11 @@ class RentsController < ApplicationController
   private
 
   def set_instrument
-    @instrument = Instrument.find(params[:id])
+    @instrument = Instrument.find(params[:instrument_id])
   end
 
   def rent_params
-    params.require(:rents).permit(:start_date, :end_date, :total_value, :instrument_id)
+    params.require(:rent).permit(:start_date, :end_date, :total_value, :instrument_id)
   end
 
 end

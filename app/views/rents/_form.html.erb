@@ -1,0 +1,11 @@
+<div class="container">
+  <div>
+    <%= simple_form_for [@instrument, @rent] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <p></p>
+      <%= f.submit %>
+    <% end %>
+   </div>
+</div>
+

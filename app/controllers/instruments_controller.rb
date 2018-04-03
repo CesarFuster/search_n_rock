@@ -7,6 +7,7 @@ class InstrumentsController < ApplicationController
   end
 
   def show
+    @rent = Rent.new
   end
 
   def new

@@ -9,6 +9,10 @@
       <p> <%= @instrument.day_value %> </p>
   </div>
 
+  <p class="btn btn-success"> <%= link_to "Rent", new_instrument_rent_path(@instrument) %> </p>
+
+  <p></p>
+
   <p class="btn btn-primary"> <%= link_to "back to all", instruments_path %> </p>
 
   <p class="btn btn-warning"> <%= link_to "Edit", edit_instrument_path(@instrument) %> </p>

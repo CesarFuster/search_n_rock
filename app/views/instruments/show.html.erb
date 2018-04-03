@@ -3,6 +3,7 @@
   <h1> <%= @instrument.category %> </h1>
 
   <div>
+      <p> <%= cl_image_tag @instrument.photo, height: 300, width: 400, crop: :fill %> </p>
       <p> <%= @instrument.brand %> </p>
       <p> <%= @instrument.description %> </p>
       <p> <%= @instrument.condition %> </p>

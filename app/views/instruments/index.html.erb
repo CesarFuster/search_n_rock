@@ -1,14 +1,13 @@
-
 <div class="container">
 
   <h1>Instruments</h1>
 
-  <div>
-    <ul>
-      <% @instruments.each do |instrument| %>
-      <li> <%= link_to instrument.category, instrument_path(instrument) %> </li>
-      <hr>
-      <% end %>
-    </ul>
-  </div>
+  <% @instruments.each do |instrument| %>
+    <div class="card"> <%= link_to instrument.category, instrument_path(instrument) %> </div>
+    <hr>
+    <% end %>
+    <p></p>
+
+  <p class="btn btn-primary"> <%= link_to "Add Instrument", new_instrument_path %> </p>
+
 </div>

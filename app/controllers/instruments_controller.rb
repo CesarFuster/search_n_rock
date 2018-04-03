@@ -1,5 +1,6 @@
 class InstrumentsController < ApplicationController
 
+  skip_before_action :authenticate_user!, only: [:index]
   before_action :set_instrument, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -34,16 +35,25 @@ class InstrumentsController < ApplicationController
 
   def update
     @instrument.update(instrument_params)
-    if @instrument.save
-      redirect_to instruments_path
+    if @instrument.user != current_user
+      redirect_to root_path
     else
-      render :new
+      if @instrument.save
+        redirect_to instruments_path
+      else
+        render :new
+      end
     end
   end
 
   def destroy
-    @instrument.destroy
-    redirect_to instruments_path
+    if @instrument.user != current_user
+      flash[:alert] = "Esse instrumento nao é seu"
+      render :show
+    else
+      @instrument.destroy
+      redirect_to instruments_path
+    end
   end
 
   private

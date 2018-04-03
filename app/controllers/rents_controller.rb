@@ -20,6 +20,7 @@ class RentsController < ApplicationController
     @rent = Rent.new(rent_params)
     @rent.instrument = @instrument
     @rent.user = current_user
+    @rent.total_value = @rent.value
     if @rent.save!
       redirect_to rent_path(@rent)
     else

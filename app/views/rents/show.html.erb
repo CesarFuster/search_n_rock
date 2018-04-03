@@ -1,2 +1,26 @@
-<h1>Rents#show</h1>
-<p>Find me in app/views/rents/show.html.erb</p>
+<div class="container">
+
+  <h1> <%= @rent.user.email %> </h1>
+
+  <div>
+    <p>Categoria: <%= @rent.instrument.category %> </p>
+    <p>Início: <%= @rent.start_date %> </p>
+    <p>Fim: <%= @rent.end_date %> </p>
+  </div>
+
+  <p></p>
+
+  <p class="btn btn-primary"> <%= link_to "back to all", instruments_path %> </p>
+
+
+  <h2>Outros alugueis do <%= @rent.user.email %></h2>
+  <ul>
+    <% @all_user_rents.each do |rent| %>
+    <li>
+      <%= rent.start_date %> - <%= rent.end_date %>
+      <%= rent.instrument.category %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+

@@ -1,0 +1,21 @@
+body {
+  background-color: #DFD3D3;
+}
+
+h1 {
+  font-size: 24px;
+  //margin: 10px;
+  font-weight: bold;
+}
+
+a {
+  color: black;
+  font-size: 16px;
+  font-weight: lighter;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    opacity: 0.6;
+  }
+}
+

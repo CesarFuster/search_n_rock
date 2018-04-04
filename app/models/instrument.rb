@@ -5,4 +5,5 @@ class Instrument < ApplicationRecord
   validates :category, inclusion: { in: ['drums', 'guitar', 'bass', 'violin', 'xylophone', 'keyboard', 'piano', 'cello', 'microphone', 'PA']}
   validates :condition, inclusion: { in: ['new', 'used']}
   validates :day_value, presence: true
+  validates :photo, presence: true
 end

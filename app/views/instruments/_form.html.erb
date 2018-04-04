@@ -1,10 +1,10 @@
 <div class="container">
   <div>
     <%= simple_form_for @instrument do |f| %>
-      <%= f.input :category %>
+      <%= f.input :category, collection: ['drums', 'guitar', 'bass', 'violin', 'xylophone', 'keyboard', 'piano', 'cello', 'microphone', 'PA']%>
       <%= f.input :brand %>
       <%= f.input :description %>
-      <%= f.input :condition %>
+      <%= f.input :condition, collection: ['new', 'used']%>
       <%= f.input :day_value %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>

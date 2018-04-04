@@ -1,14 +1,16 @@
-<div class="container">
-  <div>
-    <h1>Search Instruments</h1>
-    <p></p>
-  </div>
 
-  <div>
-    <%= form_tag(instruments_path, method: :get) do %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://res.cloudinary.com/dx8bblo6i/image/upload/v1522834982/tumblr_static_rock-n-roll.jpg');">
+  <div class="banner-content">
+    <h1>search n'rock</h1>
+    <p>musical instruments for rent \m/</p>
+    <div>
+      <%= form_tag(instruments_path, method: :get) do %>
       <%= text_field_tag :term, nil, placeholder: "e.g. guitar, drums..." %>
-      <%= submit_tag 'Search' %>
-    <% end %>
+      <%= submit_tag 'yeah!' , class: 'btn btn-danger'%>
+      <% end %>
+    </div>
   </div>
-
 </div>
+
+
+

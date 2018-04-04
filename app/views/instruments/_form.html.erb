@@ -1,7 +1,7 @@
 <div class="container">
   <div>
     <%= simple_form_for @instrument do |f| %>
-      <%= f.input :category, collection: ['drums', 'guitar', 'bass', 'violin', 'xylophone', 'keyboard', 'piano', 'cello', 'microphone', 'PA']%>
+      <%= f.input :category, collection: ['drums', 'guitar', 'bass', 'violin', 'xylophone', 'keyboard', 'piano', 'cello', 'microphone'].sort %>
       <%= f.input :brand %>
       <%= f.input :description %>
       <%= f.input :condition, collection: ['new', 'used']%>

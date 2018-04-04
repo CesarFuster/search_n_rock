@@ -14,11 +14,11 @@
 
       <div class="instrument-info col-xs-12 col-md-4">
         <div>
-        <%= cl_image_tag current_user.photo, id: "avatar" %>
+        <%= cl_image_tag @instrument.user.photo, id: "avatar" %>
         </div>
-        <p> <strong>Name:</strong> <%= current_user.name %> </p>
-        <p> <strong>Address:</strong> <%= current_user.address %> </p>
-        <p> <strong>Email:</strong> <%= current_user.email %> </p>
+        <p> <strong>Name:</strong> <%= @instrument.user.name %> </p>
+        <p> <strong>Address:</strong> <%= @instrument.user.address %> </p>
+        <p> <strong>Email:</strong> <%= @instrument.user.email %> </p>
 
         <p class="separate"> <strong>Brand:</strong> <%= @instrument.brand %> </p>
         <p> <strong>Description:</strong> <%= @instrument.description %> </p>

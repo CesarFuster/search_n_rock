@@ -1,0 +1,38 @@
+.row-container {
+  display: flex;
+  align-items: center;
+}
+
+.btn-white {
+  background-color: white;
+  color: black ;
+  &:hover {
+    background-color: white;
+    color: lightgray;
+    opacity: 1;
+  }
+}
+
+.btn.btn-rent {
+  width: 40%;
+  background-color: white;
+  color: black ;
+  &:hover {
+    background-color: white;
+    color: lightgray;
+    opacity: 1;
+  }
+}
+
+#avatar {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.separate {
+  padding-top: 20px;
+}

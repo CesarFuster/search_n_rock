@@ -1,16 +1,13 @@
 <div class="container">
+  <div class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to "Instruments", instruments_path %></li>
+    <li class="breadcrumb-item"><%= link_to @instrument.category %></li>
+  </div>
+
     <div class="row-container">
       <div class="pic-btn-container col-xs-12 col-md-8">
-        <h1> <%= @instrument.category %> </h1>
-
         <p> <%= cl_image_tag @instrument.photo, height: 300, width: 400, crop: :fill %> </p>
-
-        <p class="btn btn-primary"> <%= link_to "back to all", instruments_path %> </p>
-
-        <p class="btn btn-rent"> <%= link_to "Rent", new_instrument_rent_path(@instrument) %> </p>
-
       </div>
-
 
       <div class="instrument-info col-xs-12 col-md-4">
         <div>
@@ -30,6 +27,12 @@
 
         <%= link_to "Delete", instrument_path(@instrument), method: :delete, class: 'btn btn-white' %> </p>
         <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <p class="btn btn-success btn-block btn-lg"> <%= link_to "Rent", new_instrument_rent_path(@instrument) %> </p>
+
       </div>
     </div>
 </div>

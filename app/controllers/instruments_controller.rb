@@ -4,8 +4,10 @@ class InstrumentsController < ApplicationController
   before_action :set_instrument, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:query].present?
-      @instruments = Instrument.search_by_category_and_brand("#{params[:query]}")
+    @instruments = Instrument.search_by_category_and_brand("#{params[:query]}")
+
+    if @instruments.length != 0
+      @instruments
     else
       @instruments = Instrument.all
     end

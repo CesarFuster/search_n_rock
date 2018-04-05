@@ -1,30 +1,47 @@
 <div class="container">
 
-  <h1> <%= @rent.user.email %> </h1>
-
   <div>
-    <p>Categoria: <%= @rent.instrument.category %> </p>
-    <p>Início: <%= @rent.start_date %> </p>
-    <p>Fim: <%= @rent.end_date %> </p>
+    <h1>Thanks! Rent confirmed!</h1>
+    <hr>
   </div>
 
-  <div>
-    <p>Valor total: <%= @rent.total_value %> </p>
+  <div class="row">
+    <div class="box-rent col-md-7 col-xs-12">
+      <p> <%= @rent.instrument.category %> of <%= @rent.instrument.user.name %></p>
+      <hr>
+      <div class="row">
+        <div class="rent col-md-7" style="background-image: url(<%= @instrument.photo.url %>)">
+        </div>
+        <div class="description col-md-3" >
+          <div>
+            <p>Start: <%= @rent.start_date %> </p>
+            <p>End: <%= @rent.end_date %> </p>
+          </div>
+          <hr>
+          <div>
+            <p><strong> Total value R$: <%= @rent.total_value %> </strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="all-rents col-md-4 col-xs-12" >
+      <div>
+        <p>All your rents</p>
+        <div class="itens-rents">
+          <ol>
+            <% @all_user_rents.each do |rent| %>
+            <li>
+              <%= rent.instrument.category %> of <%= rent.instrument.user.name %> | Total R$: <%= rent.total_value %>
+            </li>
+            <% end %>
+          </ol>
+        </div>
+        <div class="button">
+          <p class="back"> <%= link_to "back to all instruments", instruments_path %> </p>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <p></p>
-
-  <p class="btn btn-primary"> <%= link_to "back to all", instruments_path %> </p>
-
-
-  <h2>Outros alugueis do <%= @rent.user.email %></h2>
-  <ul>
-    <% @all_user_rents.each do |rent| %>
-    <li>
-      <%= rent.start_date %> - <%= rent.end_date %>
-      <%= rent.instrument.category %>
-    </li>
-    <% end %>
-  </ul>
 </div>
 

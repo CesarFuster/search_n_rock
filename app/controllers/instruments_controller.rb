@@ -5,7 +5,7 @@ class InstrumentsController < ApplicationController
 
   def index
     if params[:query].present?
-      @instruments = Instrument.where("category ILIKE ?", "%#{params[:query]}%")
+      @instruments = Instrument.search_by_category_and_brand("#{params[:query]}")
     else
       @instruments = Instrument.all
     end
@@ -30,13 +30,16 @@ class InstrumentsController < ApplicationController
   end
 
   def edit
+    if @instrument.user != current_user
+      redirect_to root_path
+    end
   end
 
   def update
-    @instrument.update(instrument_params)
     if @instrument.user != current_user
       redirect_to root_path
     else
+      @instrument.update(instrument_params)
       if @instrument.save
         redirect_to instruments_path
       else

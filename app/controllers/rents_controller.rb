@@ -13,18 +13,26 @@ class RentsController < ApplicationController
   end
 
   def new
-    @rent = Rent.new
+    if @instrument.user == current_user
+      redirect_to instrument_path(@instrument)
+    else
+      @rent = Rent.new
+    end
   end
 
   def create
-    @rent = Rent.new(rent_params)
-    @rent.instrument = @instrument
-    @rent.user = current_user
-    @rent.total_value = @rent.value
-    if @rent.save!
-      redirect_to rent_path(@rent)
+    if @instrument.user == current_user
+      redirect_to instrument_path(@instrument)
     else
-      render :new
+      @rent = Rent.new(rent_params)
+      @rent.instrument = @instrument
+      @rent.user = current_user
+      @rent.total_value = @rent.value
+        if @rent.save!
+          redirect_to rent_path(@rent)
+        else
+          render :new
+        end
     end
   end
 

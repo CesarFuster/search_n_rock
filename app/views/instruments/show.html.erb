@@ -29,9 +29,13 @@
         <% end %>
       </div>
     </div>
+    <% if @instrument.user != current_user %>
     <div class="row">
       <div class="col-xs-12 text-center">
         <p> <%= link_to "Rent", new_instrument_rent_path(@instrument), class: "btn btn-success btn-block btn-lg" %> </p>
       </div>
     </div>
-  </div>
+    <% end %>
+</div>
+
+

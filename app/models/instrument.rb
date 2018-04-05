@@ -6,4 +6,11 @@ class Instrument < ApplicationRecord
   validates :condition, inclusion: { in: ['new', 'used']}
   validates :day_value, presence: true
   validates :photo, presence: true
+
+  include PgSearch
+  pg_search_scope :search_by_category_and_brand,
+    against: [ :category, :brand ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

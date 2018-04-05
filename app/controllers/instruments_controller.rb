@@ -5,7 +5,6 @@ class InstrumentsController < ApplicationController
 
   def index
     @instruments = Instrument.search_by_category_and_brand("#{params[:query]}")
-
     if @instruments.length != 0
       @instruments
     else

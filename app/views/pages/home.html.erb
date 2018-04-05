@@ -4,13 +4,19 @@
     <h1>hey ho, let's go!</h1>
     <p>music instruments for rent \m/</p>
     <div>
-      <%= form_tag(instruments_path, method: :get) do %>
-      <%= text_field_tag :term, nil, placeholder: "e.g. guitar, drums..." %>
-      <%= submit_tag 'yeah!' , class: 'btn btn-danger'%>
-      <% end %>
+      <%= form_tag instruments_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+        placeholder: "e.g. guitar, drums..." %>
+        <p></p>
+        <%= submit_tag 'yeah!' , class: 'btn btn-danger'%>
+        <% end %>
     </div>
   </div>
 </div>
+
+
 
 
 

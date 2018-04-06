@@ -6,20 +6,14 @@ class InstrumentsController < ApplicationController
   def index
     @instruments = Instrument.search_by_category_and_brand("#{params[:query]}")
 
-    @markers = @instruments.map do |instrument|
-      if instrument.user.latitude
-        {
-          lat: instrument.user.latitude,
-          lng: instrument.user.longitude#,
-          # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
-        }
-      end
+    @instruments = Instrument.all if @instruments.count.zero?
+
+    @markers = []
+    @instruments.each do |instrument|
+      marker = { lat: instrument.user.latitude, lng: instrument.user.longitude }
+      @markers << marker if instrument.user.latitude.present? && instrument.user.longitude.present?
     end
-    if @instruments.length != 0
-      @instruments
-    else
-      @instruments = Instrument.all
-    end
+
   end
 
   def show

@@ -7,8 +7,9 @@
       <%= form_tag instruments_path, method: :get do %>
       <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
+      class: "form-in-line",
         placeholder: "e.g. guitar, drums..." %>
+
         <p></p>
         <%= submit_tag 'yeah!' , class: 'btn btn-danger'%>
         <% end %>

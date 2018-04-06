@@ -20,6 +20,7 @@ class InstrumentsController < ApplicationController
     @rent = Rent.new
     @review = Review.new
     @reviews = @instrument.user.reviews
+    @ave_review = Review.where(user_id: @instrument.user).average(:rating)
   end
 
   def new

@@ -32,7 +32,6 @@
       </div>
     </div>
 
-
   </div>
 
   <div class="container profile">
@@ -51,7 +50,18 @@
       </div>
 
       <div class="profile-description col-xs-12 col-md-4">
-        <p> Average rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+        <p> Average rating:
+          <% empty = 5 - @ave_review.to_i %>
+          <% @ave_review.to_i.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <% empty.times do %>
+            <i class="far fa-star"></i>
+          <% end %>
+
+
+
+          </p>
       </div>
     </div>
 

@@ -1,0 +1,72 @@
+=> [[32m#<Instrument:0x00005632bffc5bc8[0m
+  id: [1;34m2[0m,
+  category: [31m[1;31m"[0m[31mcello[1;31m"[0m[31m[0m,
+  day_value: [1;35m0.123e5[0m,
+  brand: [31m[1;31m"[0m[31mstradivarius[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mBach first instrument[1;31m"[0m[31m[0m,
+  condition: [31m[1;31m"[0m[31mUsed[1;31m"[0m[31m[0m,
+  photo:
+   [31m[1;31m"[0m[31mimage/upload/v1522863840/t7fd27dd6wylcusrp0eb.jpg[1;31m"[0m[31m[0m,
+  user_id: [1;34m1[0m,
+  created_at: [1;34;4mWed[0m, [1;34m04[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m17[0m:[1;34m43[0m:[1;34m59[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mWed[0m, [1;34m04[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m17[0m:[1;34m43[0m:[1;34m59[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Instrument:0x00005632bffc5920[0m
+  id: [1;34m3[0m,
+  category: [31m[1;31m"[0m[31mVioline[1;31m"[0m[31m[0m,
+  day_value: [1;35m0.129e5[0m,
+  brand: [31m[1;31m"[0m[31mStradivarius[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mFirst Vivald violine[1;31m"[0m[31m[0m,
+  condition: [31m[1;31m"[0m[31mUsed[1;31m"[0m[31m[0m,
+  photo:
+   [31m[1;31m"[0m[31mimage/upload/v1522866169/m3dcwqlgmuiwui0js3en.jpg[1;31m"[0m[31m[0m,
+  user_id: [1;34m2[0m,
+  created_at: [1;34;4mWed[0m, [1;34m04[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m18[0m:[1;34m22[0m:[1;34m48[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mWed[0m, [1;34m04[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m18[0m:[1;34m22[0m:[1;34m48[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Instrument:0x00005632bffc5718[0m
+  id: [1;34m4[0m,
+  category: [31m[1;31m"[0m[31mviolin[1;31m"[0m[31m[0m,
+  day_value: [1;35m0.12e5[0m,
+  brand: [31m[1;31m"[0m[31mstradivarius[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mVivald first violin[1;31m"[0m[31m[0m,
+  condition: [31m[1;31m"[0m[31mused[1;31m"[0m[31m[0m,
+  photo:
+   [31m[1;31m"[0m[31mimage/upload/v1522942771/wtaf7p9fxn3mqo94lk1u.jpg[1;31m"[0m[31m[0m,
+  user_id: [1;34m4[0m,
+  created_at: [1;34;4mThu[0m, [1;34m05[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m15[0m:[1;34m39[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mThu[0m, [1;34m05[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m15[0m:[1;34m39[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Instrument:0x00005632bffc5510[0m
+  id: [1;34m5[0m,
+  category: [31m[1;31m"[0m[31mcello[1;31m"[0m[31m[0m,
+  day_value: [1;35m0.34e5[0m,
+  brand: [31m[1;31m"[0m[31mstradivarius[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mBach favorite cello[1;31m"[0m[31m[0m,
+  condition: [31m[1;31m"[0m[31mused[1;31m"[0m[31m[0m,
+  photo:
+   [31m[1;31m"[0m[31mimage/upload/v1522943095/k4nvol6abp0ohvjjk5i8.jpg[1;31m"[0m[31m[0m,
+  user_id: [1;34m5[0m,
+  created_at: [1;34;4mThu[0m, [1;34m05[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m15[0m:[1;34m44[0m:[1;34m54[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mThu[0m, [1;34m05[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m15[0m:[1;34m44[0m:[1;34m54[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Instrument:0x00005632bffc4e58[0m
+  id: [1;34m6[0m,
+  category: [31m[1;31m"[0m[31mdrums[1;31m"[0m[31m[0m,
+  day_value: [1;35m0.12334e5[0m,
+  brand: [31m[1;31m"[0m[31mFEGFDV[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mFGFDVFDV[1;31m"[0m[31m[0m,
+  condition: [31m[1;31m"[0m[31mnew[1;31m"[0m[31m[0m,
+  photo:
+   [31m[1;31m"[0m[31mimage/upload/v1522943912/xjkb9z2ttbscjxbd0ynr.jpg[1;31m"[0m[31m[0m,
+  user_id: [1;34m6[0m,
+  created_at: [1;34;4mThu[0m, [1;34m05[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m15[0m:[1;34m58[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mThu[0m, [1;34m05[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m15[0m:[1;34m58[0m:[1;34m31[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Instrument:0x00005632bffc4bb0[0m
+  id: [1;34m7[0m,
+  category: [31m[1;31m"[0m[31mdrums[1;31m"[0m[31m[0m,
+  day_value: [1;35m0.12334e5[0m,
+  brand: [31m[1;31m"[0m[31msuper[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mqwwdc[1;31m"[0m[31m[0m,
+  condition: [31m[1;31m"[0m[31mused[1;31m"[0m[31m[0m,
+  photo:
+   [31m[1;31m"[0m[31mimage/upload/v1522962837/upyeolwkzenahlpmf7ly.jpg[1;31m"[0m[31m[0m,
+  user_id: [1;34m7[0m,
+  created_at: [1;34;4mThu[0m, [1;34m05[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m21[0m:[1;34m13[0m:[1;34m56[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mThu[0m, [1;34m05[0m [1;34;4mApr[0m [1;34m2018[0m [1;34m21[0m:[1;34m15[0m:[1;34m11[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m]

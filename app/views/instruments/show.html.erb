@@ -4,38 +4,53 @@
     <li class="breadcrumb-item"><%= link_to @instrument.category %></li>
   </div>
 
-  <div class="row-container">
-    <div class="pic-btn-container col-xs-12 col-md-8">
-      <p> <%= cl_image_tag @instrument.photo, height: 300, width: 400, crop: :fill %> </p>
+  <div class="row">
+    <div class="col-xs-6 col-md-6">
+      <div class="image-container" style="background-image: url(<%= @instrument.photo.url %>)"></div>
+      <p> <%= link_to "Rent", new_instrument_rent_path(@instrument), class: "btn btn-success btn-block btn-lg" %> </p>
     </div>
 
-    <div class="instrument-info col-xs-12 col-md-4">
-      <div>
-        <%= cl_image_tag @instrument.user.photo, id: "avatar" %>
+    <div class= "info col-xs-6 col-md-6">
+      <div class= "infos col-xs-6 col-md-12">
+        <dl>
+          <dt>Brand</dt>
+          <dd><%= @instrument.brand %></dd>
+          <dt>Description</dt>
+          <dd><%= @instrument.description %></dd>
+          <dt>Condition</dt>
+          <dd><%= @instrument.condition %></dd>
+          <dt>Day Value</dt>
+          <dd><%= @instrument.day_value %></dd>
+        </dl>
       </div>
-      <p> <strong>Name:</strong> <%= @instrument.user.name %> </p>
-      <p> <strong>Address:</strong> <%= @instrument.user.address %> </p>
-      <p> <strong>Email:</strong> <%= @instrument.user.email %> </p>
-
-      <p class="separate"> <strong>Brand:</strong> <%= @instrument.brand %> </p>
-      <p> <strong>Description:</strong> <%= @instrument.description %> </p>
-      <p> <strong>Condition:</strong> <%= @instrument.condition %> </p>
-      <p> <strong>Day Value:</strong> $ <%= @instrument.day_value %> </p>
-
-      <% if @instrument.user == current_user %>
-      <p> <%= link_to "Edit", edit_instrument_path(@instrument), class: 'btn btn-white' %>
-
-        <%= link_to "Delete", instrument_path(@instrument), method: :delete, class: 'btn btn-white' %> </p>
+      <div class= "buttons col-xs-6">
+        <% if @instrument.user == current_user %>
+          <p> <%= link_to "Edit", edit_instrument_path(@instrument), class: 'btn btn-white' %>
+            <%= link_to "Delete", instrument_path(@instrument), method: :delete, class: 'btn btn-white' %> </p>
         <% end %>
       </div>
     </div>
-    <% if @instrument.user != current_user %>
-    <div class="row">
-      <div class="col-xs-12 text-center">
-        <p> <%= link_to "Rent", new_instrument_rent_path(@instrument), class: "btn btn-success btn-block btn-lg" %> </p>
+
+      <div class="row col-xs-12 profile">
+        <div class="col-xs-6 profile-pic">
+          <div id="image-align">
+            <%= cl_image_tag @instrument.user.photo, id: "avatar" %>
+          </div>
+       </div>
+       <div class="col-xs-6 profile-info">
+        <dl>
+          <dt>Name</dt>
+          <dd><%= @instrument.user.name %></dd>
+          <dt>Address</dt>
+          <dd><%= @instrument.user.address %></dd>
+          <dt>email</dt>
+          <dd><%= @instrument.user.email %></dd>
+        </dl>
       </div>
     </div>
-    <% end %>
-</div>
 
+    <% if @instrument.user != current_user %>
+    <% end %>
+  </div>
+</div>
 

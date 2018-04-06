@@ -1,11 +1,32 @@
-.row-container {
-  display: flex;
-  align-items: center;
+dt, dd {
+  float: left;
+}
+
+dt {
+  clear: both;
+}
+
+dt {
+  margin-right: 10px;
+  line-height: 2;
+  clear:both;
+}
+
+dt::after {
+  content: ":";
+}
+
+dd {
+  clear: right;
+  line-height: 2;
 }
 
 .btn-white {
   background-color: white;
   color: black ;
+  font-weight: lighter;
+  opacity: 0.6;
+  border-radius: 4px;
   &:hover {
     background-color: white;
     color: lightgray;
@@ -13,32 +34,54 @@
   }
 }
 
-.btn.btn-rent {
-  width: 40%;
-  background-color: white;
-  color: black ;
-  &:hover {
-    background-color: white;
-    color: lightgray;
-    opacity: 1;
-  }
+.breadcrumb {
+  margin-top: 130px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  background-color: transparent !important;
 }
+
+.image-container {
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  margin-bottom: 1em
+}
+
+.info {
+  padding-left: 40px;
+  font-family: arial;
+}
+
 
 #avatar {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  position: absolute;
-  right: 10px;
-  top: 10px;
 }
 
-.separate {
+#image-align {
+  margin-top: 19px;
+}
+
+.profile {
+  border: grey;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  margin: 40px 0 0 0;
+}
+
+.profile-pic {
+}
+
+.profile-info {
+  width: 50%;
+}
+
+.buttons {
   padding-top: 20px;
 }
-
-.breadcrumb {
-  margin-top: 10px;
-}
-
-

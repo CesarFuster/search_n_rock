@@ -1,0 +1,76 @@
+<div class="container">
+
+  <div class="row-img">
+    <div class="img-div col-xs-6 col-md-1">
+      <img class="img-profile" <%= cl_image_tag current_user.photo, width: 120, height: 120 %>
+    </div>
+    <div class="profile-description-col-xs-6 col-md-10">
+      <h1><%= current_user.name %> </h1>
+      <p> <%= current_user.email %> </p>
+      <p> Your average rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="itens-reviews">
+    <div class="row">
+      <div class="title-your-reviews col-xs-12 col-md-12">
+        <h1>Reviews for you</h1>
+      </div>
+      <div class="reviews-list col-xs-12 col-md-11">
+        <ol>
+          <% current_user.reviews.each do |review| %>
+          <li>
+           <%= review.content %> | <strong> # Rating: <%= review.rating  %> </strong> | <strong>Author: <%= review.author  %> </strong>
+         </li>
+         <hr>
+         <% end %>
+       </ol>
+     </div>
+   </div>
+ </div>
+
+ <hr>
+
+ <div class="itens-instruments">
+  <div class="row">
+    <div class="title-instruments col-xs-12 col-md-12">
+      <h1>Instruments</h1>
+    </div>
+    <div class="instrument-item col-xs-12 col-md-6">
+      <ul>
+        <% current_user.instruments.each do |instrument| %>
+        <li>
+          <p>
+            <%= instrument.category %> <%= instrument.brand %> <%= cl_image_tag instrument.photo, width: 120, height: 80 %>
+          </p>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+
+<div class="itens-rents">
+  <div class="row">
+    <div class="title-all-rents col-xs-12 col-md-12">
+      <h1>All Rents</h1>
+    </div>
+    <hr>
+    <div class="rents-all-list col-xs-12 col-md-offset-2 col-md-9">
+      <ol>
+        <% current_user.rents.each do |rent| %>
+        <li>
+          <%= rent.instrument.category %> of <%= rent.instrument.user.name %> | From: <%= rent.start_date %> to: <%= rent.end_date %> |Total R$: <%= rent.total_value %>
+        </li>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+
+  </div>
+</div>

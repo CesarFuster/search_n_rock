@@ -1,5 +1,6 @@
 <div class="container">
-  <div>
+  <div class="form-inst">
+    <div>
     <%= simple_form_for @instrument do |f| %>
       <%= f.input :category, collection: ['drums', 'guitar', 'bass', 'violin', 'xylophone', 'keyboard', 'piano', 'cello', 'microphone'].sort %>
       <%= f.input :brand %>
@@ -12,4 +13,5 @@
       <%= f.submit %>
     <% end %>
    </div>
+  </div>
 </div>

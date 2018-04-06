@@ -24,6 +24,8 @@ class InstrumentsController < ApplicationController
 
   def show
     @rent = Rent.new
+    @review = Review.new
+    @reviews = @instrument.user.reviews
   end
 
   def new

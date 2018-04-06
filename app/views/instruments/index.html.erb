@@ -15,6 +15,13 @@
                 <h2> <%= instrument.category %> </h2>
                 <p> <%= instrument.user.name %> </p>
                 <p> <%= instrument.user.email %> </p>
+                <p><% empty = 5 - instrument.user.reviews.average(:rating).to_i %>
+                  <% instrument.user.reviews.average(:rating).to_i.times do %>
+                    <i class="fas fa-star"></i>
+                  <% end %>
+                  <% empty.times do %>
+                    <i class="far fa-star"></i>
+                  <% end %></p>
               </div>
               <img class="card-user" src=<%= cl_image_path instrument.user.photo %>>
             </div>

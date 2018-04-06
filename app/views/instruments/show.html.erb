@@ -28,29 +28,34 @@
         <p> <%= link_to "Edit", edit_instrument_path(@instrument), class: 'btn btn-white' %>
           <%= link_to "Delete", instrument_path(@instrument), method: :delete, class: 'btn btn-white' %> </p>
         </div>
-      <% end %>
+        <% end %>
       </div>
     </div>
 
 
   </div>
 
-  <div class="container">
-    <div class="row-img">
-      <div class="img-div col-xs-6 col-md-2">
-        <img class="img-profile" <%= cl_image_tag @instrument.user.photo, width: 120, height: 120 %>
+  <div class="container profile">
+
+      <div class="row row-img">
+      <div class= "col-xs-12 col-md-3">
+        <div id= "image-align">
+          <%= cl_image_tag @instrument.user.photo, id: "avatar" %>
+        </div>
       </div>
 
-      <div class="profile-description-col-xs-6 col-md-3">
+      <div class="profile-description-info col-xs-12 col-md-5">
         <h1><%= @instrument.user.name %> </h1>
         <p> <%= @instrument.user.email %> </p>
         <p> <%= @instrument.user.address %> </p>
       </div>
 
-      <div class="profile-description-col-xs-6 col-md-5">
-        <p> Your average rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+      <div class="profile-description col-xs-12 col-md-4">
+        <p> Average rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
       </div>
     </div>
+
+
   </div>
 
   <div class="container">
@@ -66,7 +71,6 @@
               <li>
                <%= review.content %> | <strong> # Rating: <%= review.rating  %> </strong> | <strong>Author: <%= review.author  %> </strong>
               </li>
-              <hr>
             <% end %>
           </ul>
         </div>
@@ -83,7 +87,7 @@
           <div>
             <%= simple_form_for [@instrument, @review] do |f| %>
             <div class="two-grids">
-              <%= f.input :author, placeholder: "your name" %>
+              <%= f.input :author, placeholder: "Your name" %>
               <%= f.input :rating, collection: [0, 1, 2, 3, 4, 5] %>
               <%= f.input :content %>
             </div>

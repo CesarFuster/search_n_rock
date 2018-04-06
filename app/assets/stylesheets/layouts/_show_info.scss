@@ -32,6 +32,13 @@
 
 .details {
   font-size: 16px;
+  margin-top: 0px;
+  line-height: 14px;
+}
+
+.details h1 {
+  margin-top: 0px;
+  padding: 0px
 }
 
 #avatar {
@@ -48,6 +55,12 @@
   display:flex;
   align-items: center;
   justify-content: space-between;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #FBF0F0;
 }
 
 .img-div {
@@ -81,13 +94,25 @@
 }
 
 .itens-reviews {
-  background-color: #FBF0F0;
-  margin-left: 65px;
+  //background-color: #FBF0F0;
+  margin-bottom: 10px;
 }
 
 .title-your-reviews {
   text-align: center;
 }
+
+.reviews-list {
+  text-align:justify;
+  padding-right: 5px;
+  padding-left: 20px;
+}
+
+.two-grids {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
 
 
 

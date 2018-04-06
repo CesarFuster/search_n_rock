@@ -7,11 +7,10 @@
     <div class="profile-description-col-xs-6 col-md-10">
       <h1><%= current_user.name %> </h1>
       <p> <%= current_user.email %> </p>
+      <p> <%= current_user.address %> </p>
       <p> Your average rating: <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
     </div>
   </div>
-
-  <hr>
 
   <div class="itens-reviews">
     <div class="row">
@@ -31,7 +30,7 @@
    </div>
  </div>
 
- <hr>
+<hr>
 
  <div class="itens-instruments">
   <div class="row">
@@ -62,13 +61,13 @@
     </div>
     <hr>
     <div class="rents-all-list col-xs-12 col-md-offset-2 col-md-9">
-      <ol>
+      <ul>
         <% current_user.rents.each do |rent| %>
         <li>
           <%= rent.instrument.category %> of <%= rent.instrument.user.name %> | From: <%= rent.start_date %> to: <%= rent.end_date %> |Total R$: <%= rent.total_value %>
         </li>
         <% end %>
-      </ol>
+      </ul>
     </div>
   </div>
 

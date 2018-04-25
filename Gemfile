@@ -5,6 +5,7 @@ gem "geocoder"
 gem 'devise'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
+gem 'omniauth-facebook'
 gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.6'
